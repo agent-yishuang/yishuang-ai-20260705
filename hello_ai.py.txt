@@ -1,0 +1,14 @@
+import requests
+response = requests.post(
+    "https://api.deepseek.com/v1/chat/completions",
+    headers={
+        "Authorization": "Bearer sk-538be27d9d6e4d1e95e6c9683967af02 ",
+        "Content-Type": "application/json"
+    },
+    json={
+        "model": "deepseek-chat",
+        "messages": [{"role": "user", "content": "用一句话介绍你自己"}],
+        "stream": False
+    }
+)
+print(response.json())
