@@ -273,4 +273,4 @@ with gr.Blocks(title="AI 全能工具箱") as demo:
             chart_input = gr.Textbox(label="数据描述", lines=3); chart_btn = gr.Button("推荐图表"); chart_output = gr.Textbox(label="推荐结果", lines=8)
             chart_btn.click(chart_suggest, inputs=chart_input, outputs=chart_output)
 
-demo.launch()
+demo.launch(share=True)
